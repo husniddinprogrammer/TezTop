@@ -1,0 +1,218 @@
+package Husniddin.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
+
+@Entity
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
+public class SportZal {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    private String nomi;
+    private String manzil;
+    private Integer status;
+    private String googleMap;
+    private String koordinataX;
+    private String koordinataY;
+    @ManyToOne
+    private User boshliq;
+    @ManyToOne
+    private User admin;
+    @ManyToOne
+    private MaydonTuri maydonTuri;
+    private Long oqilgan;
+    private Long oqilganIchi;
+    @ManyToOne
+    private Fayl photo1;
+    @ManyToOne
+    private Fayl photo2;
+    private String starWork;
+    private String finishWork;
+    private Boolean open;
+    private Integer kunlikNarxi;
+    private Integer oylikNarxi;
+
+    public SportZal() {
+    }
+
+    public SportZal(Long id, String nomi, String manzil, Integer status, String googleMap, String koordinataX, String koordinataY, User boshliq, User admin, MaydonTuri maydonTuri, Long oqilgan, Long oqilganIchi, Fayl photo1, Fayl photo2, String starWork, String finishWork, Boolean open, Integer kunlikNarxi, Integer oylikNarxi) {
+        this.id = id;
+        this.nomi = nomi;
+        this.manzil = manzil;
+        this.status = status;
+        this.googleMap = googleMap;
+        this.koordinataX = koordinataX;
+        this.koordinataY = koordinataY;
+        this.boshliq = boshliq;
+        this.admin = admin;
+        this.maydonTuri = maydonTuri;
+        this.oqilgan = oqilgan;
+        this.oqilganIchi = oqilganIchi;
+        this.photo1 = photo1;
+        this.photo2 = photo2;
+        this.starWork = starWork;
+        this.finishWork = finishWork;
+        this.open = open;
+        this.kunlikNarxi = kunlikNarxi;
+        this.oylikNarxi = oylikNarxi;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomi() {
+        return nomi;
+    }
+
+    public void setNomi(String nomi) {
+        this.nomi = nomi;
+    }
+
+    public String getManzil() {
+        return manzil;
+    }
+
+    public void setManzil(String manzil) {
+        this.manzil = manzil;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public String getGoogleMap() {
+        return googleMap;
+    }
+
+    public void setGoogleMap(String googleMap) {
+        this.googleMap = googleMap;
+    }
+
+    public String getKoordinataX() {
+        return koordinataX;
+    }
+
+    public void setKoordinataX(String koordinataX) {
+        this.koordinataX = koordinataX;
+    }
+
+    public String getKoordinataY() {
+        return koordinataY;
+    }
+
+    public void setKoordinataY(String koordinataY) {
+        this.koordinataY = koordinataY;
+    }
+
+    public User getBoshliq() {
+        return boshliq;
+    }
+
+    public void setBoshliq(User boshliq) {
+        this.boshliq = boshliq;
+    }
+
+    public User getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(User admin) {
+        this.admin = admin;
+    }
+
+    public MaydonTuri getMaydonTuri() {
+        return maydonTuri;
+    }
+
+    public void setMaydonTuri(MaydonTuri maydonTuri) {
+        this.maydonTuri = maydonTuri;
+    }
+
+    public Long getOqilgan() {
+        return oqilgan;
+    }
+
+    public void setOqilgan(Long oqilgan) {
+        this.oqilgan = oqilgan;
+    }
+
+    public Long getOqilganIchi() {
+        return oqilganIchi;
+    }
+
+    public void setOqilganIchi(Long oqilganIchi) {
+        this.oqilganIchi = oqilganIchi;
+    }
+
+    public Fayl getPhoto1() {
+        return photo1;
+    }
+
+    public void setPhoto1(Fayl photo1) {
+        this.photo1 = photo1;
+    }
+
+    public Fayl getPhoto2() {
+        return photo2;
+    }
+
+    public void setPhoto2(Fayl photo2) {
+        this.photo2 = photo2;
+    }
+
+    public String getStarWork() {
+        return starWork;
+    }
+
+    public void setStarWork(String starWork) {
+        this.starWork = starWork;
+    }
+
+    public String getFinishWork() {
+        return finishWork;
+    }
+
+    public void setFinishWork(String finishWork) {
+        this.finishWork = finishWork;
+    }
+
+    public Boolean getOpen() {
+        return open;
+    }
+
+    public void setOpen(Boolean open) {
+        this.open = open;
+    }
+
+    public Integer getKunlikNarxi() {
+        return kunlikNarxi;
+    }
+
+    public void setKunlikNarxi(Integer kunlikNarxi) {
+        this.kunlikNarxi = kunlikNarxi;
+    }
+
+    public Integer getOylikNarxi() {
+        return oylikNarxi;
+    }
+
+    public void setOylikNarxi(Integer oylikNarxi) {
+        this.oylikNarxi = oylikNarxi;
+    }
+}
+
+
+
+
+
